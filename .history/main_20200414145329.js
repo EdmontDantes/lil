@@ -13,9 +13,9 @@ const Lil = function() {
       if (this.head === null) {
         this.head = Node(value);
       } else if (this.head !== null) {
-        let previousHead = this.head;
+        const previousHead = this.head;
         this.head = Node(value);
-        this.head.next = previousHead;
+        this.next = previousHead;
 
         // Node(value).head = this.head;
 
@@ -23,22 +23,11 @@ const Lil = function() {
     },
 
     addToEnd: function(value) {
-      if (this.head === null) {
+      if (Node(value).head === undefined) {
         this.head = Node(value);
-      }else if (this.head !== null && this.head.next === null) {
-        this.head.next = Node(value);
-      } else if (this.head !== null && this.head.next !== null) {
-        this.head.next.next = Node(value);
-      }
-    },
+      }else if (this.head !== undefined) {
 
-    removeFromStart: function(value) {
-      // if (this.head !== null) {
-      //   this.head = null;
-      // }
-      let previousHead = this.head.next;
-      this.head = this.head.next;
-      return previousHead;
+      }
     }
   };
 };

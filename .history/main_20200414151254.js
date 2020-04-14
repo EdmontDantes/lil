@@ -33,12 +33,9 @@ const Lil = function() {
     },
 
     removeFromStart: function(value) {
-      // if (this.head !== null) {
-      //   this.head = null;
-      // }
-      let previousHead = this.head.next;
-      this.head = this.head.next;
-      return previousHead;
+      if (this.head !== null) {
+        this.head = null;
+      }
     }
   };
 };

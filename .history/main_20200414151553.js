@@ -36,7 +36,7 @@ const Lil = function() {
       // if (this.head !== null) {
       //   this.head = null;
       // }
-      let previousHead = this.head.next;
+      let previousHead = this.head;
       this.head = this.head.next;
       return previousHead;
     }

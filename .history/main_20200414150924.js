@@ -28,17 +28,8 @@ const Lil = function() {
       }else if (this.head !== null && this.head.next === null) {
         this.head.next = Node(value);
       } else if (this.head !== null && this.head.next !== null) {
-        this.head.next.next = Node(value);
-      }
-    },
-
-    removeFromStart: function(value) {
-      // if (this.head !== null) {
-      //   this.head = null;
-      // }
-      let previousHead = this.head.next;
-      this.head = this.head.next;
-      return previousHead;
+        this.head.next = Node(value)
+      } 
     }
   };
 };
